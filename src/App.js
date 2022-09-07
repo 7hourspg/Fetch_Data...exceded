@@ -6,14 +6,6 @@ export default function App() {
   useEffect(() => {
     axios.get("http://localhost:7000").then((res) => setState(res.data));
   }, []);
-
-  // let savedData = state.map((singleData) => {
-  //   let base64String = btoa(
-  //     String.fromCharCode(...new Uint8Array(singleData.image.data.data))
-  //   );
-  //   return base64String;
-  // });
-
   console.log(state);
   return (
     <div className="App">
